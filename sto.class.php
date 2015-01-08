@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('sto')) {
 	class sto extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.2';
+		public $version				= '1.0.0';
 		protected $this_game		= 'sto';
 		protected $types			= array('classes', 'races');
 		protected $classes			= array();
