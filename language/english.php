@@ -25,15 +25,21 @@ if ( !defined('EQDKP_INC') ){
 $english_array =  array(
 	'classes' => array(
 		0	=> 'Unknown',
-		1	=> 'FED-Engineering',
-		2	=> 'FED-Science',
-		3	=> 'FED-Tactical',
+		1	=> 'UFP-Engineering',
+		2	=> 'UFP-Science',
+		3	=> 'UFP-Tactical',
 		4	=> 'KDF-Engineering',
 		5	=> 'KDF-Science',
 		6	=> 'KDF-Tactical',
 		7	=> 'RR-Engineering',
 		8	=> 'RR-Science',
 		9	=> 'RR-Tactical',
+		10	=> 'TOS-Engineering',
+		11	=> 'TOS-Science',
+		12	=> 'TOS-Tactical',
+		13	=> 'DOM-Engineering',
+		14	=> 'DOM-Science',
+		15	=> 'DOM-Tactical',
 	),
 	'races' => array(
 		//Federation
@@ -64,6 +70,11 @@ $english_array =  array(
 		22	=> 'Trill',
 		23	=> 'Romulan',
 		24	=> 'Reman',
+		25	=> 'Talaxian',
+		26	=> 'Cardassian',
+		//Dominion
+		27	=> "Jem'Hadar",
+		28	=> "Jem'Hadar Vanguard",
 	),
 
 	'lang' => array(

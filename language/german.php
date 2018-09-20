@@ -25,15 +25,21 @@ if ( !defined('EQDKP_INC') ){
 $german_array = array(
 	'classes' => array(
 		0	=> 'Unbekannt',
-		1	=> 'FED-Ingenieur',
-		2	=> 'FED-Wissenschaftler',
-		3	=> 'FED-Taktiker',
+		1	=> 'UFP-Ingenieur',
+		2	=> 'UFP-Wissenschaftler',
+		3	=> 'UFP-Taktiker',
 		4	=> 'KDF-Ingenieur',
 		5	=> 'KDF-Wissenschaftler',
 		6	=> 'KDF-Taktiker',
 		7	=> 'RR-Ingenieur',
 		8	=> 'RR-Wissenschaftler',
 		9	=> 'RR-Taktiker',
+		10	=> 'TOS-Ingenieur',
+		11	=> 'TOS-Wissenschaftler',
+		12	=> 'TOS-Taktiker',
+		13	=> 'DOM-Ingenieur',
+		14	=> 'DOM-Wissenschaftler',
+		15	=> 'DOM-Taktiker',
 	),
 	'races' => array(
 		//Federation
@@ -64,6 +70,12 @@ $german_array = array(
 		22	=> 'Trill',
 		23	=> 'Romulaner',
 		24	=> 'Remaner',
+			
+		25	=> 'Talaxianer',
+		26	=> 'Cardassianer',
+		//Dominion
+		27	=> "Jem'Hadar",
+		28	=> "Jem'Hadar Vanguard",
 	),
 
 	'lang' => array(
