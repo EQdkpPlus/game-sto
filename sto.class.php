@@ -26,9 +26,9 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('sto')) {
 	class sto extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '1.1.0';
+		public $version				= '1.1.1';
 		protected $this_game		= 'sto';
-		protected $types			= array('classes', 'races');
+		protected $types			= array('classes', 'races', 'factions');
 		protected $classes			= array();
 		protected $races			= array();
 		protected $factions			= array();
@@ -36,22 +36,47 @@ if(!class_exists('sto')) {
 
 		protected $class_dependencies = array(
 			array(
+					'name'		=> 'faction',
+					'type'		=> 'factions',
+					'admin'		=> false,
+					'decorate'	=> true,
+					'parent'	=> false,
+					'colorize'	=> true,
+			),
+				
+			array(
 				'name'		=> 'race',
 				'type'		=> 'races',
 				'admin'		=> false,
 				'decorate'	=> true,
-				'parent'	=> false
+				'parent'	=> array(
+					'faction' => array(
+						1 => array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19),
+						2 => array(0,20,21,22,23),
+						3 => array(0,24,25,26,27,28,29,30,31,32,33),
+						4 => array(0,34,35,36),
+						5 => array(0,37,38),
+					),
+				),
 			),
 			array(
 				'name'		=> 'class',
 				'type'		=> 'classes',
 				'admin'		=> false,
-				'decorate'	=> true,
+				'decorate'	=> false,
 				'primary'	=> true,
-				'colorize'	=> true,
+				'colorize'	=> false,
 				'roster'	=> true,
 				'recruitment' => true,
-				'parent'	=> false
+					'parent'	=> array(
+							'faction' => array(
+									1 => 'all',
+									2 => 'all',
+									3 => 'all',
+									4 => 'all',
+									5 => 'all',
+							),
+					),
 			),
 		);
 
@@ -59,18 +84,6 @@ if(!class_exists('sto')) {
 			1	=> '#c69f44',
 			2	=> '#256895',
 			3	=> '#aa251f',
-			4	=> '#c69f44',
-			5	=> '#256895',
-			6	=> '#aa251f',
-			7	=> '#c69f44',
-			8	=> '#256895',
-			9	=> '#aa251f',
-			10	=> '#c69f44',
-			11	=> '#256895',
-			12	=> '#aa251f',
-			13	=> '#c69f44',
-			14	=> '#256895',
-			15	=> '#aa251f',
 		);
 
 		protected $glang		= array();
@@ -91,7 +104,7 @@ if(!class_exists('sto')) {
 							'type'			=> 'spinner',
 							'category'		=> 'character',
 							'lang'			=> 'uc_level',
-							'max'			=> 50,
+							'max'			=> 65,
 							'min'			=> 1,
 							'undeletable'	=> false,
 							'sort'			=> 4
